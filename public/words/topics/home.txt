@@ -1,0 +1,2 @@
+kitchen:kitchen1
+bathroom:bathroom1
