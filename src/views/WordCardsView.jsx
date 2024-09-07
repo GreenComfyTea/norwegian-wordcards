@@ -34,7 +34,7 @@ const WordCardsView = ({ topics, onBackClick }) => {
   }, [currentWord, pickRandomWord]);
 
   return (
-    <div className="w-full flex justify-end sm:justify-center flex-col gap-4">
+    <div className="w-full flex justify-end sm:justify-center flex-col gap-4 h-full">
       <div className="flex overflow-y-auto grow">
         {currentWord && <WordCard word={currentWord} />}
       </div>
