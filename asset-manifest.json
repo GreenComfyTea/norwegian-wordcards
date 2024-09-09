@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/norwegian-wordcards/static/css/main.da55985f.css",
+    "main.js": "/norwegian-wordcards/static/js/main.171f1ae2.js",
+    "static/js/453.b648631f.chunk.js": "/norwegian-wordcards/static/js/453.b648631f.chunk.js",
+    "index.html": "/norwegian-wordcards/index.html",
+    "main.da55985f.css.map": "/norwegian-wordcards/static/css/main.da55985f.css.map",
+    "main.171f1ae2.js.map": "/norwegian-wordcards/static/js/main.171f1ae2.js.map",
+    "453.b648631f.chunk.js.map": "/norwegian-wordcards/static/js/453.b648631f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.da55985f.css",
+    "static/js/main.171f1ae2.js"
+  ]
+}
