@@ -4,3 +4,17 @@
 @tailwind components;
 @tailwind utilities;
 @tailwind variants;
+
+button {
+  background-color: #017fc0;
+  color: white;
+
+  &:hover,
+  &:focus {
+    background-color: #006ea6;
+  }
+
+  &:active {
+    background-color: #005e8c;
+  }
+}

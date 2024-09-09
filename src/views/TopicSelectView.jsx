@@ -1,12 +1,19 @@
 import TopicCheckbox from "components/TopicCheckbox";
-import { useCallback } from "react";
+import { useCallback, useState } from "react";
 
-const TopicSelectView = ({ topics, selectedTopicsState, onStartClick }) => {
+const TopicSelectView = ({
+  topics,
+  selectedTopicsState,
+  onOriginalToTranslatedClick,
+  onTranslatedToOriginalClick,
+}) => {
   // eslint-disable-next-line no-unused-vars
-  const [selectedTopics, setSelectedTopics] = selectedTopicsState;
+  const [_, setSelectedTopics] = selectedTopicsState;
+  const [areButtonsDisabled, setAreButtonsDisabled] = useState(false);
 
   const onTopicSelectedChange = useCallback(() => {
     setSelectedTopics(topics.filter((topic) => topic.isSelected));
+    setAreButtonsDisabled(topics.every((topic) => !topic.isSelected));
   }, [setSelectedTopics, topics]);
 
   return (
@@ -22,13 +29,24 @@ const TopicSelectView = ({ topics, selectedTopicsState, onStartClick }) => {
           ))}
         </div>
       </div>
-
-      <input
-        type="button"
-        value="Start"
-        className="p-2 h-10 justify-center align-middle items-center text-center w-full mt-4 rounded-lg theme-light !my-0"
-        onClick={onStartClick}
-      />
+      <button
+        className="p-2 h-10 justify-center
+        align-middle items-center text-center w-full mt-4 rounded-lg
+        !my-0"
+        onClick={onOriginalToTranslatedClick}
+        disabled={areButtonsDisabled}
+      >
+        Norwegian ➔ Russian
+      </button>
+      <button
+        className="p-2 h-10 justify-center
+        align-middle items-center text-center w-full mt-4 rounded-lg
+        !my-0"
+        onClick={onTranslatedToOriginalClick}
+        disabled={areButtonsDisabled}
+      >
+        Russian ➔ Norwegian
+      </button>
     </div>
   );
 };

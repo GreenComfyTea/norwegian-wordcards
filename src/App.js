@@ -7,6 +7,7 @@ const App = () => {
   const [flowState, setFlowState] = useState("loading");
 
   const [topics, setTopics] = useState([]);
+  const [isOriginalToTranslated, setIsOriginalToTranslated] = useState(true);
 
   const selectedTopicsState = useState([]);
   const [selectedTopics, setSelectedTopics] = selectedTopicsState;
@@ -60,8 +61,8 @@ const App = () => {
                 return { localized: wordPair, original: wordPair };
 
               return {
-                localized: wordPairArray[0],
-                original: wordPairArray[1],
+                original: wordPairArray[0],
+                localized: wordPairArray[1],
               };
             });
 
@@ -74,11 +75,15 @@ const App = () => {
     });
   }, [topics]);
 
-  const onStartClick = useCallback(() => {
-    if (topics.every((topic) => !topic.isSelected)) return;
-
+  const onOriginalToTranslatedClick = useCallback(() => {
+    setIsOriginalToTranslated(true);
     setFlowState("wordcards");
-  }, [topics]);
+  }, []);
+
+  const onTranslatedToOriginalClick = useCallback(() => {
+    setIsOriginalToTranslated(false);
+    setFlowState("wordcards");
+  }, []);
 
   const onBackClick = useCallback(() => {
     setFlowState("topic-select");
@@ -92,6 +97,8 @@ const App = () => {
     fetchWords();
   }, [fetchWords, topics]);
 
+  console.log("isOriginalToTranslated", isOriginalToTranslated);
+
   return (
     <div className="font-['Roboto'] leading-3 p-4 h-screen flex justify-center align-middle items-center">
       {flowState === "loading" && (
@@ -104,11 +111,16 @@ const App = () => {
         <TopicSelectView
           topics={topics}
           selectedTopicsState={selectedTopicsState}
-          onStartClick={onStartClick}
+          onOriginalToTranslatedClick={onOriginalToTranslatedClick}
+          onTranslatedToOriginalClick={onTranslatedToOriginalClick}
         />
       )}
       {flowState === "wordcards" && (
-        <WordCardsView topics={selectedTopics} onBackClick={onBackClick} />
+        <WordCardsView
+          topics={selectedTopics}
+          isOriginalToTranslated={isOriginalToTranslated}
+          onBackClick={onBackClick}
+        />
       )}
     </div>
   );
