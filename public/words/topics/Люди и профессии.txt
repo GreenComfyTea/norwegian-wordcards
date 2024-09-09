@@ -1,0 +1,15 @@
+en butikk : магазин
+en byggmester : строитель
+en gutt : мальчик
+en jente : девочка
+en kamerat : друг
+en kjæreste : возлюбленный/возлюбленная
+en kvinne : женщина
+en lege : врач
+en mann : мужчина
+en person : человек
+en renholder : уборщик
+en servitør : официант
+en sønn : сын
+en tannlege : стоматолог
+folk : люди

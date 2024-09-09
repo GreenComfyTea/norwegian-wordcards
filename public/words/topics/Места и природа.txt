@@ -1,0 +1,6 @@
+ei elv : река
+en innsjø : озеро
+en parkering : парковка
+en sjø : озеро
+en strand : пляж
+et hav : море

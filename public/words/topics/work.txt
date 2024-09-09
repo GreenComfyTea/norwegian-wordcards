@@ -1,2 +1,0 @@
-office:office1
-computer:computer1

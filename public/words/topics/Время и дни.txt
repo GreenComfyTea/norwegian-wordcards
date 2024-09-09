@@ -1,0 +1,8 @@
+en dag : день
+en helg : выходные
+en kveld : вечер
+en uke : неделя
+i går : вчера
+i morgen : завтра
+om morgenen : утром
+timer : часы (в учебе)

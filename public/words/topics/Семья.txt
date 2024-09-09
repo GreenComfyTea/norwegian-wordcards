@@ -1,0 +1,15 @@
+ei/en bestemor : бабушка
+ei/en datter : дочь
+ei/en mamma : мама
+ei/en mor : мать
+ei/en søster : сестра
+ei/en tante : тётя
+en bestefar : дедушка
+en bror : брат
+en far : отец
+en onkel : дядя
+en pappa : папа
+en sønn : сын
+et barn : ребёнок
+et søsken : сиблинги (братья и сестры)
+foreldre : родители (без артикля)

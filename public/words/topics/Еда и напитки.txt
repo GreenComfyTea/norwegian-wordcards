@@ -1,0 +1,11 @@
+en blåbær : черника
+en frokost : завтрак
+en jordbær : клубника
+en jus : сок
+en kvarg : творог
+en middag : обед/ужин
+et eple : яблоко
+et glass : стакан
+et måltid : приём пищи
+et smør : масло
+syltetøy : варенье
